@@ -8,6 +8,8 @@ public class SpringBootMvcPetClinicApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootMvcPetClinicApplication.class, args);
+
+        System.out.println("hello world");
     }
 
 }
