@@ -5,7 +5,7 @@ package com.sumutella.petclinic.models;
  * @time 7:15 PM
  * @since 11/26/2019, Tue
  */
-public class PetType {
+public class PetType extends BaseEntity {
     private String name;
 
     public PetType() {
