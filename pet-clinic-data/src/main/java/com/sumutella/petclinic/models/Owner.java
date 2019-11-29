@@ -6,4 +6,5 @@ package com.sumutella.petclinic.models;
  * @since 11/26/2019, Tue
  */
 public class Owner extends Person {
+
 }

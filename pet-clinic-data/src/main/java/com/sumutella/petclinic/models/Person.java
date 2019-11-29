@@ -20,4 +20,12 @@ public class Person extends BaseEntity {
     public void setLname(String lname) {
         this.lname = lname;
     }
+
+    public String getFname() {
+        return fname;
+    }
+
+    public String getLname() {
+        return lname;
+    }
 }
