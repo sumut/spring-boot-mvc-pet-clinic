@@ -1,7 +1,5 @@
 package com.sumutella.petclinic.bootstrap;
 
-import com.sumutella.petclinic.map.OwnerServiceMap;
-import com.sumutella.petclinic.map.VetServiceMap;
 import com.sumutella.petclinic.models.Owner;
 import com.sumutella.petclinic.models.Vet;
 import com.sumutella.petclinic.services.OwnerService;
@@ -20,9 +18,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

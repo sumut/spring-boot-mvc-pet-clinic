@@ -2,6 +2,7 @@ package com.sumutella.petclinic.map;
 
 import com.sumutella.petclinic.models.Vet;
 import com.sumutella.petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -10,6 +11,7 @@ import java.util.Set;
  * @time 2:47 PM
  * @since 11/27/2019, Wed
  */
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Integer> implements VetService {
     @Override
     public Set<Vet> findAll() {
