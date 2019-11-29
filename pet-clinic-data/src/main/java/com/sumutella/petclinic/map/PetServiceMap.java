@@ -1,7 +1,7 @@
 package com.sumutella.petclinic.map;
 
 import com.sumutella.petclinic.models.Pet;
-import com.sumutella.petclinic.services.CrudService;
+import com.sumutella.petclinic.services.PetService;
 
 import java.util.Set;
 
@@ -10,7 +10,7 @@ import java.util.Set;
  * @time 2:44 PM
  * @since 11/27/2019, Wed
  */
-public class PetServiceMap extends AbstractMapService<Pet, Integer> implements CrudService<Pet, Integer> {
+public class PetServiceMap extends AbstractMapService<Pet, Integer> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();

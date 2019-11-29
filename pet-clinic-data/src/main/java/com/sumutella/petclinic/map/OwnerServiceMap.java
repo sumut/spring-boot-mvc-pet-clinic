@@ -1,7 +1,7 @@
 package com.sumutella.petclinic.map;
 
 import com.sumutella.petclinic.models.Owner;
-import com.sumutella.petclinic.services.CrudService;
+import com.sumutella.petclinic.services.OwnerService;
 
 import java.util.Set;
 
@@ -10,7 +10,7 @@ import java.util.Set;
  * @time 2:35 PM
  * @since 11/27/2019, Wed
  */
-public class OwnerServiceMap extends AbstractMapService<Owner, Integer> implements CrudService<Owner, Integer> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Integer> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -35,5 +35,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Integer> implemen
     @Override
     public Owner findById(Integer id) {
         return super.findById(id);
+    }
+
+    @Override
+    public Owner findByLname(String lname) {
+        return null;
     }
 }
