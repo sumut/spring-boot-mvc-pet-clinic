@@ -8,6 +8,7 @@ package com.sumutella.petclinic.models;
 public class PetType extends BaseEntity {
     private String name;
 
+
     public PetType() {
     }
 
