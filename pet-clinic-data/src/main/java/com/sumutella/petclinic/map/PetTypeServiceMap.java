@@ -30,7 +30,7 @@ public class PetTypeServiceMap extends AbstractMapService<PetType, Integer> impl
 
     @Override
     public PetType save(PetType petType) {
-        return save(petType);
+        return super.save(petType);
     }
 
     @Override

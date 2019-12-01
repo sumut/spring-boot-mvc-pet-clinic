@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @time 3:26 PM
  * @since 11/27/2019, Wed
  */
-@RequestMapping("/vets")
+@RequestMapping({"/vets", "/vets.html"})
 @Controller
 public class VetController {
     private final VetService vetService;

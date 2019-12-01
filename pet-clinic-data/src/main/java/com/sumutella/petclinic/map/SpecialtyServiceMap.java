@@ -1,7 +1,8 @@
 package com.sumutella.petclinic.map;
 
-import com.sumutella.petclinic.models.Speciality;
+import com.sumutella.petclinic.models.Specialty;
 import com.sumutella.petclinic.services.SpecialtyService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -10,25 +11,26 @@ import java.util.Set;
  * @time 1:49 PM
  * @since 12/1/2019, Sun
  */
-public class SpecialtyServiceMap extends AbstractMapService<Speciality, Integer>  implements SpecialtyService {
+@Service
+public class SpecialtyServiceMap extends AbstractMapService<Specialty, Integer>  implements SpecialtyService {
     @Override
-    public Set<Speciality> findAll() {
+    public Set<Specialty> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Speciality findById(Integer integer) {
+    public Specialty findById(Integer integer) {
         return super.findById(integer);
     }
 
     @Override
-    public Speciality save(Speciality object) {
+    public Specialty save(Specialty object) {
         return super.save(object);
     }
 
     @Override
-    public void delete(Speciality speciality) {
-        super.delete(speciality);
+    public void delete(Specialty specialty) {
+        super.delete(specialty);
     }
 
     @Override

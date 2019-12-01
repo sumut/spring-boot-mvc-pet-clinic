@@ -9,16 +9,16 @@ import java.util.Set;
  * @since 11/26/2019, Tue
  */
 public class Vet extends Person {
-    private Set<Speciality> specialties = new HashSet<>();
+    private Set<Specialty> specialties = new HashSet<>();
 
     public Vet() {
     }
 
-    public Set<Speciality> getSpecialties() {
+    public Set<Specialty> getSpecialties() {
         return specialties;
     }
 
-    public void setSpecialties(Set<Speciality> specialties) {
+    public void setSpecialties(Set<Specialty> specialties) {
         this.specialties = specialties;
     }
 }
