@@ -1,10 +1,7 @@
 package com.sumutella.petclinic.bootstrap;
 
 import com.sumutella.petclinic.models.*;
-import com.sumutella.petclinic.services.OwnerService;
-import com.sumutella.petclinic.services.PetTypeService;
-import com.sumutella.petclinic.services.SpecialtyService;
-import com.sumutella.petclinic.services.VetService;
+import com.sumutella.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -22,12 +19,14 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -98,6 +97,12 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(fionasPet);
 
         ownerService.save(owner2);
+
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasPet);
+        catVisit.setDescription("sneezy visit");
+        catVisit.setLocalDate(LocalDate.now());
 
 
         Vet vet1= new Vet();

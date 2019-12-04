@@ -2,6 +2,7 @@ package com.sumutella.petclinic.map;
 
 import com.sumutella.petclinic.models.Specialty;
 import com.sumutella.petclinic.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -12,6 +13,7 @@ import java.util.Set;
  * @since 12/1/2019, Sun
  */
 @Service
+@Profile({"default", "map"})
 public class SpecialtyMapService extends AbstractMapService<Specialty, Integer>  implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {

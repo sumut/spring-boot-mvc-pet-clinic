@@ -1,5 +1,8 @@
 package com.sumutella.petclinic.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
@@ -8,6 +11,8 @@ import javax.persistence.MappedSuperclass;
  * @time 7:12 PM
  * @since 11/26/2019, Tue
  */
+@Getter
+@Setter
 @MappedSuperclass
 public class Person extends BaseEntity {
 
@@ -19,19 +24,5 @@ public class Person extends BaseEntity {
     public Person() {
     }
 
-    public void setFirstName(String fname) {
-        this.firstName = fname;
-    }
 
-    public void setLastName(String lname) {
-        this.lastName = lname;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
 }

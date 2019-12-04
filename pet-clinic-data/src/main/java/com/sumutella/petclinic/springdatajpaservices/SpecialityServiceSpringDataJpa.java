@@ -3,6 +3,8 @@ package com.sumutella.petclinic.springdatajpaservices;
 import com.sumutella.petclinic.models.Specialty;
 import com.sumutella.petclinic.repositories.SpecialtyRepository;
 import com.sumutella.petclinic.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,6 +14,8 @@ import java.util.Set;
  * @time 5:13 PM
  * @since 12/4/2019, Wed
  */
+@Service
+@Profile("springdatajpa")
 public class SpecialityServiceSpringDataJpa implements SpecialtyService {
     private final SpecialtyRepository specialtyRepository;
 

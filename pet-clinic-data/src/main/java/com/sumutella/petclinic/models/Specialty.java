@@ -1,5 +1,10 @@
 package com.sumutella.petclinic.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -8,16 +13,13 @@ import javax.persistence.Table;
  * @time 10:02 PM
  * @since 11/30/2019, Sat
  */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "SPECIALTIES")
 public class Specialty extends BaseEntity {
     private String description;
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

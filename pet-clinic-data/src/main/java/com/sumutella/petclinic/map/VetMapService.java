@@ -4,6 +4,7 @@ import com.sumutella.petclinic.models.Specialty;
 import com.sumutella.petclinic.models.Vet;
 import com.sumutella.petclinic.services.SpecialtyService;
 import com.sumutella.petclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -14,6 +15,7 @@ import java.util.Set;
  * @since 11/27/2019, Wed
  */
 @Service
+@Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet, Integer> implements VetService {
     private SpecialtyService specialtyService;
 
