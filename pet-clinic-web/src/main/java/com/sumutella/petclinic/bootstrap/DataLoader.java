@@ -54,8 +54,8 @@ public class DataLoader implements CommandLineRunner {
 
 
         Owner owner1 = new Owner();
-        owner1.setFname("Michael");
-        owner1.setLname("Weston");
+        owner1.setFirstName("Michael");
+        owner1.setLastName("Weston");
         owner1.setAddress("No: 35 Saglik Sk");
         owner1.setCity("Bedirge");
         owner1.setTelephone("05541760084");
@@ -76,7 +76,7 @@ public class DataLoader implements CommandLineRunner {
         Pet mikesPet = new Pet();
         mikesPet.setPetType(savedDog);
         mikesPet.setOwner(owner1);
-        mikesPet.setBdate(LocalDate.now());
+        mikesPet.setBirthDate(LocalDate.now());
         mikesPet.setName("dogi");
         owner1.getPets().add(mikesPet);
 
@@ -84,8 +84,8 @@ public class DataLoader implements CommandLineRunner {
 
 
         Owner owner2 = new Owner();
-        owner2.setFname("Fiona");
-        owner2.setLname("Glenanne");
+        owner2.setFirstName("Fiona");
+        owner2.setLastName("Glenanne");
         owner2.setAddress("No: 2/1 Pence Sk");
         owner2.setCity("Mamak");
         owner2.setTelephone("05539460084");
@@ -93,7 +93,7 @@ public class DataLoader implements CommandLineRunner {
         Pet fionasPet = new Pet();
         fionasPet.setPetType(savedCat);
         fionasPet.setOwner(owner2);
-        fionasPet.setBdate(LocalDate.now());
+        fionasPet.setBirthDate(LocalDate.now());
         fionasPet.setName("pisi");
         owner2.getPets().add(fionasPet);
 
@@ -101,16 +101,16 @@ public class DataLoader implements CommandLineRunner {
 
 
         Vet vet1= new Vet();
-        vet1.setFname("Sam");
-        vet1.setLname("Axe");
+        vet1.setFirstName("Sam");
+        vet1.setLastName("Axe");
         vet1.getSpecialties().add(savedRadiology);
         vetService.save(vet1);
 
 
         Vet vet2 = new Vet();
 
-        vet2.setLname("Jessie");
-        vet2.setFname("Porter");
+        vet2.setLastName("Jessie");
+        vet2.setFirstName("Porter");
         vet2.getSpecialties().add(savedSurgery);
 
         vetService.save(vet2);

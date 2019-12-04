@@ -1,5 +1,9 @@
 package com.sumutella.petclinic.models;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 /**
@@ -7,7 +11,11 @@ import java.io.Serializable;
  * @time 11:16 AM
  * @since 11/27/2019, Wed
  */
+@MappedSuperclass
 public class BaseEntity implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     public Integer getId() {
@@ -17,4 +25,6 @@ public class BaseEntity implements Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
+
 }

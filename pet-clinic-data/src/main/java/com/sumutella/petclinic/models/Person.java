@@ -1,31 +1,37 @@
 package com.sumutella.petclinic.models;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
 /**
  * @author sumutella
  * @time 7:12 PM
  * @since 11/26/2019, Tue
  */
+@MappedSuperclass
 public class Person extends BaseEntity {
 
-    private String fname;
-    private String lname;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
 
     public Person() {
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setFirstName(String fname) {
+        this.firstName = fname;
     }
 
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setLastName(String lname) {
+        this.lastName = lname;
     }
 
-    public String getFname() {
-        return fname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getLname() {
-        return lname;
+    public String getLastName() {
+        return lastName;
     }
 }

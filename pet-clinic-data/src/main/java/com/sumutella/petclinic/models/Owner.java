@@ -1,5 +1,9 @@
 package com.sumutella.petclinic.models;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,10 +12,14 @@ import java.util.Set;
  * @time 7:13 PM
  * @since 11/26/2019, Tue
  */
+@Entity
+@Table(name = "OWNERS")
 public class Owner extends Person {
     private String address;
     private String city;
     private String telephone;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
 
@@ -50,6 +58,8 @@ public class Owner extends Person {
     public void setPets(Set<Pet> pets) {
         this.pets = pets;
     }
+
+
 
 
 }

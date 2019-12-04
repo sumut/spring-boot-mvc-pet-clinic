@@ -1,5 +1,6 @@
 package com.sumutella.petclinic.models;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,7 +9,12 @@ import java.util.Set;
  * @time 7:13 PM
  * @since 11/26/2019, Tue
  */
+@Entity
+@Table(name = "VETS")
 public class Vet extends Person {
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "VET_SPECIALTIES", joinColumns = @JoinColumn(name = "vet_id"),
+            inverseJoinColumns = @JoinColumn(name = "specialty_id"))
     private Set<Specialty> specialties = new HashSet<>();
 
     public Vet() {

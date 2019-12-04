@@ -1,5 +1,6 @@
 package com.sumutella.petclinic.models;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
@@ -7,10 +8,20 @@ import java.time.LocalDate;
  * @time 7:14 PM
  * @since 11/26/2019, Tue
  */
+@Entity
+@Table(name = "PETS")
 public class Pet extends BaseEntity {
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
-    private LocalDate bdate;
+
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
     private String name;
 
 
@@ -33,12 +44,12 @@ public class Pet extends BaseEntity {
         this.owner = owner;
     }
 
-    public LocalDate getBdate() {
-        return bdate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBdate(LocalDate bdate) {
-        this.bdate = bdate;
+    public void setBirthDate(LocalDate bdate) {
+        this.birthDate = bdate;
     }
 
     public String getName() {
