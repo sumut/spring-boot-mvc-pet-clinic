@@ -14,7 +14,7 @@ import java.util.Set;
  * @since 11/27/2019, Wed
  */
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Integer> implements VetService {
+public class VetMapService extends AbstractMapService<Vet, Integer> implements VetService {
     private SpecialtyService specialtyService;
 
     @Override
